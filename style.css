@@ -1,0 +1,86 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #8c82c4; /* Fundo roxo da imagem */
+}
+
+.calculator {
+  background-color: #2d2a37; /* Cor da calculadora */
+  padding: 30px;
+  border-radius: 30px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+  width: 350px;
+}
+
+.display {
+  text-align: right;
+  margin-bottom: 20px;
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.previous-operand {
+  color: #6b6b6b;
+  font-size: 1.2rem;
+  min-height: 1.5rem;
+}
+
+.current-operand {
+  color: #ffffff;
+  font-size: 3rem;
+  font-weight: 500;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.keypad {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 15px;
+}
+
+.btn {
+  border: none;
+  background-color: #2d2a37;
+  color: #ffffff;
+  font-size: 1.5rem;
+  height: 65px;
+  border-radius: 50%;
+  cursor: pointer;
+  /* Efeito sutil de profundidade nos botões */
+  box-shadow:
+    -5px -5px 10px rgba(255, 255, 255, 0.05),
+    5px 5px 15px rgba(0, 0, 0, 0.5);
+  transition: all 0.2s;
+}
+
+.btn:active {
+  box-shadow:
+    inset -3px -3px 7px rgba(255, 255, 255, 0.05),
+    inset 3px 3px 10px rgba(0, 0, 0, 0.5);
+}
+
+.fn {
+  color: #a482ff; /* Cor dos botões CE, C, % */
+}
+
+.operator {
+  background-color: #462878; /* Roxo escuro para os operadores */
+}
+
+.equals {
+  background-color: #a482ff; /* Roxo claro para o igual */
+  color: white;
+}
